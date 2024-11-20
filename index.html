@@ -130,6 +130,60 @@
 
 
     }
+/* About Us Section */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f0f8ff;
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #004d80;
+}
+
+.about p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.about-team {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.team-member {
+    background: #fff;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    color: #004d80;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.5;
+}
+.team-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 90%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: 3px solid #004d80;
+}
 
     /* Contact Section */
     .contact {
@@ -174,10 +228,41 @@
     .contact form button:hover {
         background: #00aaff;
     }
-    .hotline{
+    /*hotlines*/
+.hotlines {
+    background-color: #0c3d67;
+    color: #fff;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    max-width: 100%;
+    margin: 0;
+    gap: 20px; 
+}
 
-    }
+.hotline-left, .hotline-right {
+    flex: 1; 
+    min-width: 300px; 
+    padding: 0 20px;
+}
 
+.hotline-left h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.hotline-right h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.hotlines p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
     /* Footer */
     footer {
         background: #004d80;
@@ -198,6 +283,7 @@
             <a href="#solutions">Solutions</a>
             <a href="#technology">Technology</a>
             <a href="#insights">Insights</a>
+            <a href="#about">About</a>
             <a href="#contact">Contact Us</a>
         </nav>
     </header>
@@ -246,7 +332,33 @@
     </a>
     </section>
 
-    <!-- Contact Section -->
+    <!--About Section-->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+    <p>Meet the dream team behind ORPHIC – a trio of quirky personalities who somehow make magic happen!</p>
+    <div class="about-team">
+        <!-- Hacker -->
+        <div class="team-member">
+            <img src="photo/464963604_8463594547022750_3233352530495717329_n.jpg" alt="Hacker" class="team-photo">
+            <h3>Hacker</h3>
+            <p>Can write 100 lines of code in an hour, but takes two hours to debug it. Motto: 'If it works, don’t ask why.</p>
+        </div>
+        <!-- Hipster -->
+        <div class="team-member">
+            <img src="photo/457045490_3551012505121237_4043407719480841372_n.jpg" alt="Hipster" class="team-photo">
+            <h3>Hipster</h3>
+            <p>Believes 'aesthetic' is a lifestyle, not just a design choice. Spends more time on Pinterest than on meetings.</p>
+        </div>
+        <!-- Hustler -->
+        <div class="team-member">
+            <img src="photo/371839912_993711305207068_1741609034572069136_n.jpg" alt="Hustler" class="team-photo">
+            <h3>Hustler</h3>
+            <p>The smooth talker who could sell an umbrella in the middle of a desert. If they’re on the phone, it’s probably a "big deal."</p>
+        </div>
+    </div>
+</section>
+    <!--Contact Section-->
+
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <form action="#">
@@ -259,15 +371,26 @@
             <button type="submit">Send</button>
         </form>
     </section>
-
-     <!-- Emergency Hotlines -->
-     <section id="hotlines" class="hotlines">
+<!--emergency hotline left-->
+<!-- Emergency Hotlines Section -->
+<section id="hotlines" class="hotlines">
+    <div class="hotline-left">
+        <h1>ORPHIC</h1>
+        <p>
+            📍 Kihare, Tankulan Manolo Fortich, Bukidnon, 8703, Philippines.<br>
+            📧 orphicmanolo@gmail.com<br>
+            📞 +call me baby
+        </p>
+    </div>
+    <div class="hotline-right">
         <h2>Manolo Fortich Emergency Hotlines</h2>
         <p>Local Disaster Risk Reduction and Management Office (LDRRMO): 0915-813-9494</p>
-        <p>Barangay Health Emergency Respose Team (BHERTs): 0956-407-9652</p>
+        <p>Barangay Health Emergency Response Team (BHERTs): 0956-407-9652</p>
         <p>Manolo Fortich Rescue: 0915-813-9494</p>
         <p>Police Department: 0916-313-7327</p>
-    </section>
+    </div>
+</section>
+
 
 
     <!-- Footer -->
