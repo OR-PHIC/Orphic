@@ -130,7 +130,38 @@
     .card p {
         font-size: 0.9em;
     }
+    /*Mission section*/
+    .mission-vision {
+            padding: 50px 20px;
+            background-color: #eef2f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .mission-vision .col {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .mission-vision .divider {
+            width: 2px;
+            background-color: #ccc;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .mission-vision h1 {
+            font-size: 2.5em;
+        }
+        
+        .mission-vision p{
+            font-size: 1.2em;
+        }
     /* Technology Section */
     .technology {
         padding: 60px 20px;
@@ -146,12 +177,32 @@
     /* Insights Section */
     .insights {
         padding: 60px 20px;
-        text-align: center;
-    }
+        background-color: #eef2f3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .insights .col {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
 
+        .insights .divider {
+            width: 2px;
+            background-color: #ccc;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
     .insights h2 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
+.insights p{
+    font-size: 1.2em;
+}
 
     .insightbutton {
         background-color: #004d80;
@@ -292,6 +343,17 @@
     .contact form button:hover {
         background: #00aaff;
     }
+    .popup-message{
+        display: none; 
+        position: fixed;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding: 20px; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: center;
+    }
 
     /*hotlines*/
     .hotlines {
@@ -345,7 +407,8 @@
         <div class="logo">ORPHIC</div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#goals">Goals</a>
+            <a href="#solutions">Goals</a>
+            <a href="#mission-vision">Mission</a>
             <a href="#technology">Technology</a>
             <a href="#insights">Insights</a>
             <a href="#about">About</a>
@@ -361,7 +424,7 @@
 
     <!-- Solutions Section -->
     <section id="solutions" class="solutions">
-        <h2>Orphic's Goals: From Vision to Reality</h2>
+        <h2>Orphic's Goals</h2>
         <div class="solution-cards">
             <div class="card">
                 <h3>Reliable forecast</h3>
@@ -384,6 +447,18 @@
         </div>
     </section>
 
+   <!-- Mission and Vision Section -->
+   <section id="mission-vision" class="mission-vision">
+    <div class="col">
+        <h1>Our Mission</h1>
+        <p>To provide accurate and innovative weather monitoring solutions that empower communities and industries to adapt and thrive in an ever-changing climate.</p>
+        <div class="divider"></div>
+    </div>
+    <div class="col">
+        <h1>Our Vision</h1>
+        <p>To be the global leader in weather monitoring technology, driving advancements that ensure a safer and more sustainable future for generations to come.</p>
+    </div>
+</section>
     <!-- Technology Section -->
     <section id="technology" class="technology">
         <h2>Advanced Weather Monitoring Technology</h2>
@@ -392,15 +467,24 @@
 
     <!-- Data Insights Section -->
     <section id="insights" class="insights">
-        <h2>Data Insights & Analytics</h2>
+        <div class="col">
+        <h2>Insight</h2>
+        <p>Through deep analysis and advanced algorithms, we transform complex weather data into actionable insights that drive informed decisions.</p>
+       <div class="divider"></div>
+    </div>
+    <div class="col">
+        <h2> Analytics</h2>
         <p>Discover patterns and predict weather trends with our analytics tools.</p>
         <a href="https://or-phic.github.io/WebApp/index.html">
             <button type="submit" class="insightbutton"> Experience our WebApp</button>
+        </div>
         </a>
     </section>
 
     <!--About Section-->
     <section id="about" class="about">
+        <h2>About ORPHIC</h2>
+        <p>ORPHIC stands for Optimized Research in Precision Hydro-Meteorological Innovation and Control</p>
         <h2>About Us</h2>
         <p>Meet the dream team behind ORPHIC – a trio of quirky personalities who somehow make magic happen!</p>
         <div class="about-team">
@@ -459,14 +543,15 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="message" required></textarea>
                     <button type="submit">Send</button>
+                    <div id="popup-message" class="popup-message">
+                        <p>Message successfully sent!</p>
+                        <button onclick="closePopup()">Close</button>
+                    </div>
                 </form>
             </div>
         </div>
     
     </section>
-
-    
-
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 ORPHIC Weather Monitoring. All rights reserved.</p>
@@ -474,3 +559,4 @@
 </body>
 
 </html>
+
