@@ -252,9 +252,14 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: left;
     }
-
+    .team-member h4{
+        margin-bottom: 10px;
+        font-size: 1.3em;
+        text-align: center;
+        color: #7db4d9;
+    }
     .team-member h3 {
-        font-size: 1.5em;
+        font-size: 2em;
         color: #90bbd7;
         margin-bottom: 10px;
     }
@@ -343,18 +348,6 @@
     .contact form button:hover {
         background: #00aaff;
     }
-    .popup-message{
-        display: none; 
-        position: fixed;
-        top: 50%; 
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: #fff;
-        padding: 20px; 
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-
     /*hotlines*/
     .hotlines {
         background-image: linear-gradient(135deg, #21314e 5%, #001f3d 100%);
@@ -492,6 +485,7 @@
             <div class="team-member">
                 <img src="photo/464963604_8463594547022750_3233352530495717329_n.jpg" alt="Hacker" class="team-photo">
                 <h3>Hacker</h3>
+                <h4>Mark Jovan G. Octat</h4>
                 <p>Can write 100 lines of code in an hour, but takes two hours to debug it. Motto: 'If it works, don’t
                     ask why.</p>
             </div>
@@ -499,6 +493,7 @@
             <div class="team-member">
                 <img src="photo/457045490_3551012505121237_4043407719480841372_n.jpg" alt="Hipster" class="team-photo">
                 <h3>Hipster</h3>
+                <h4>Ahrdy Jane P. Desalan</h4>
                 <p>Believes 'aesthetic' is a lifestyle, not just a design choice. Spends more time on Pinterest than on
                     meetings.</p>
             </div>
@@ -506,13 +501,12 @@
             <div class="team-member">
                 <img src="photo/371839912_993711305207068_1741609034572069136_n.jpg" alt="Hustler" class="team-photo">
                 <h3>Hustler</h3>
+                <h4>Honey Grace B. Latcha</h4>
                 <p>The smooth talker who could sell an umbrella in the middle of a desert. If they’re on the phone, it’s
                     probably a "big deal."</p>
             </div>
         </div>
     </section>
-    
-    <!--emergency hotline left-->
     <!-- Emergency Hotlines Section -->
     <section id="hotlines" class="hotlines">
         <div class="hotline-left">
@@ -531,7 +525,6 @@
             <p>Police Department: 0916-313-7327</p>
         </div>
         <!--Contact Section-->
-
         <div class="contact" id="contact">
             <div class="contact-container">
                 <h2>Contact Us</h2>
@@ -543,10 +536,6 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="message" required></textarea>
                     <button type="submit">Send</button>
-                    <div id="popup-message" class="popup-message">
-                        <p>Message successfully sent!</p>
-                        <button onclick="closePopup()">Close</button>
-                    </div>
                 </form>
             </div>
         </div>
